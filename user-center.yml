@@ -14,13 +14,13 @@ spring:
       maximum-pool-size: 20
       connection-test-query: SELECT 1
   rabbitmq:
-    host: localhost
+    host: 192.168.1.130
     port: 5672
     username: nw
     password: nw2019
     virtual-host: /
   redis:
-    host: 192.168.1.30
+    host: 192.168.1.188
     port: 6379
     password: 123456
     timeout: 10s
@@ -48,7 +48,7 @@ mybatis:
 security:
   oauth2:
     resource:
-      user-info-uri: http://localhost:8080/api-o/user-me
+      user-info-uri: http://192.168.1.130:8080/api-o/user-me
       prefer-token-info: false
 wechat:
   domain: http://localhost:8080/api-u
