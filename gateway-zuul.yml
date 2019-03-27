@@ -35,15 +35,15 @@ zuul:
       path: /api-n/**
       serviceId: notification-center
   host:
-    connect-timeout-millis: 10000
+    connect-timeout-millis: 60000
     socket-timeout-millis: 60000
   add-proxy-headers: true
   ribbon:
     eager-load:
       enabled: true
 ribbon:
-  ReadTimeout: 10000
-  ConnectTimeout: 10000
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
 hystrix:
   command:
     default:
