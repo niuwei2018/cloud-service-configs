@@ -20,10 +20,10 @@ spring:
     password: nw2019
     virtual-host: /
   redis:
-    host: 192.168.1.194
+    host: 192.168.1.188
     port: 6379
     password: 123456
-    timeout: 10s
+    timeout: 20s
     lettuce:
       pool:
         min-idle: 0
