@@ -48,7 +48,7 @@ mybatis:
 security:
   oauth2:
     resource:
-      user-info-uri: http://192.168.1.130:8080/api-o/user-me
+      user-info-uri: http://192.168.1.94:8080/api-o/user-me
       prefer-token-info: false
 wechat:
   domain: http://localhost:8080/api-u
@@ -60,8 +60,8 @@ wechat:
       appid: xxx
       secret: xxx
 ribbon:
-  ReadTimeout: 10000
-  ConnectTimeout: 10000
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
 hystrix:
   command:
     default:
