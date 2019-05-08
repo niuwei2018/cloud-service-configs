@@ -14,7 +14,7 @@ spring:
       maximum-pool-size: 20
       connection-test-query: SELECT 1
   rabbitmq:
-    host: 192.168.1.130
+    host: 192.168.2.129
     port: 5672
     username: nw
     password: nw2019
