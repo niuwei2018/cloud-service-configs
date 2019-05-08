@@ -12,7 +12,7 @@ spring:
         max-wait: -1ms
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.1.130:3306/cloud_oauth?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+    url: jdbc:mysql://192.168.2.129:3306/cloud_oauth?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
     username: root
     password: nw2018
     hikari:
@@ -29,7 +29,7 @@ spring:
     servlet:
       load-on-startup: 1
   zipkin:
-    base-url: http://192.168.1.130:9411
+    base-url: http://192.168.2.129:9411
     enabled: true
     sender:
       type: web
