@@ -3,16 +3,43 @@ logging:
     root: info
     com.cloud: debug
   file: logs/${spring.application.name}.log
-spring:
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.2.129:3306/cloud_user?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
-    username: root
-    password: nw2018
-    hikari:
-      minimum-idle: 5
-      maximum-pool-size: 20
-      connection-test-query: SELECT 1
+  
+  dynamicds:
+  orgCodeHeader: orgCode                            #orgCode HTTP header name
+  general:                                          #通用默认配置，目前仅支持两项，具体机构数据源可覆盖通用配置 
+    maxPoolSize: 10                                 #数据源连接池最大连接数
+    minIdle: 3                                      #数据源连接池最小idle数 
+    defaultTenant : jg3                             #默认数据源，可设置为一个空的database，仅供Spring cloud检查数据源的可连接性 
+  tenants:                                          #具体机构的数据源配置
+    jg3:
+      url: jdbc:mysql://192.168.2.129:3306/cloud_user?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+      userName: root
+      password: nw2018
+    jg4:
+      url: jdbc:mysql://192.168.2.129:3306/cloud_user01?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+      userName: root
+      password: nw2018
+    jg5:
+      url: jdbc:mysql://192.168.2.129:3306/cloud_user02?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+      userName: root
+      password: nw2018
+      maxPoolSize: 20                               #覆盖默认配置 
+      minIdle: 6                                    #覆盖默认配置
+    jg6:
+      url: jdbc:mysql://192.168.2.129:3306/cloud_user03?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+      userName: root
+      password: nw2018
+  
+# spring:
+#   datasource:
+#     driver-class-name: com.mysql.jdbc.Driver
+#     url: jdbc:mysql://192.168.2.129:3306/cloud_user?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+#     username: root
+#     password: nw2018
+#     hikari:
+#       minimum-idle: 5
+#       maximum-pool-size: 20
+#       connection-test-query: SELECT 1
   rabbitmq:
     host: 192.168.2.129
     port: 5672
