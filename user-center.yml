@@ -30,7 +30,7 @@ dynamicds:
       userName: root
       password: nw2018
   
-# spring:
+spring:
 #   datasource:
 #     driver-class-name: com.mysql.jdbc.Driver
 #     url: jdbc:mysql://192.168.2.129:3306/cloud_user?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
