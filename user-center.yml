@@ -4,7 +4,7 @@ logging:
     com.cloud: debug
   file: logs/${spring.application.name}.log
   
-dynamicds:
+spring:
   orgCodeHeader: orgCode                            #orgCode HTTP header name
   general:                                          #通用默认配置，目前仅支持两项，具体机构数据源可覆盖通用配置 
     maxPoolSize: 10                                 #数据源连接池最大连接数
@@ -30,7 +30,6 @@ dynamicds:
       userName: root
       password: nw2018
   
-spring:
 #    datasource:
 #      driver-class-name: com.mysql.jdbc.Driver
 #      url: 
