@@ -29,16 +29,15 @@ spring:
       url: jdbc:mysql://192.168.2.129:3306/cloud_user03?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
       userName: root
       password: nw2018
-  
-#    datasource:
-#      driver-class-name: com.mysql.jdbc.Driver
-#      url: 
-#      username: root
-#      password: nw2018
-#      hikari:
-#        minimum-idle: 5
-#        maximum-pool-size: 20
-#        connection-test-query: SELECT 1
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: 
+    username: root
+    password: nw2018
+    hikari:
+     minimum-idle: 5
+     maximum-pool-size: 20
+     connection-test-query: SELECT 1
   rabbitmq:
     host: 192.168.2.129
     port: 5672
